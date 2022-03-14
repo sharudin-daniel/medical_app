@@ -7,7 +7,23 @@
         <option value="$PROJECT_DIR$/../medical-monitoring-master/pom.xml" />
         <option value="$PROJECT_DIR$/../message-analyzer-develop/pom.xml" />
         <option value="$PROJECT_DIR$/../common-module-develop/pom.xml" />
+        <option value="$PROJECT_DIR$/message-analyzer-develop/pom.xml" />
+        <option value="$PROJECT_DIR$/device/pom.xml" />
+        <option value="$PROJECT_DIR$/common-module-develop/pom.xml" />
+        <option value="$PROJECT_DIR$/medical-monitoring-master/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/common-module-develop/common-services/pom.xml" />
+        <option value="$PROJECT_DIR$/common-module-develop/common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/common-module-develop/dependency-management-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/common-module-develop/dto/pom.xml" />
+        <option value="$PROJECT_DIR$/medical-monitoring-master/core-api/pom.xml" />
+        <option value="$PROJECT_DIR$/medical-monitoring-master/core/pom.xml" />
+        <option value="$PROJECT_DIR$/medical-monitoring-master/dto/pom.xml" />
+        <option value="$PROJECT_DIR$/medical-monitoring-master/utils/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
