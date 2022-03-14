@@ -1,0 +1,1385 @@
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientDtoRepository.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientDtoRepository.java b/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientDtoRepository.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientDtoRepository.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,9 +0,0 @@
+-package liga.medical.medicalmonitoring.core.repository;
+-
+-import liga.medical.medicalmonitoring.dto.PatientDto;
+-import org.springframework.data.jpa.repository.JpaRepository;
+-
+-//@Repository
+-public interface PatientDtoRepository extends JpaRepository<PatientDto, Long> {
+-
+-}
+Index: src/main/java/com/example/personservice/PersonServiceApplication.java
+===================================================================
+diff --git a/src/main/java/com/example/personservice/PersonServiceApplication.java b/src/main/java/com/example/personservice/PersonServiceApplication.java
+deleted file mode 100644
+--- a/src/main/java/com/example/personservice/PersonServiceApplication.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,13 +0,0 @@
+-package com.example.personservice;
+-
+-import org.springframework.boot.SpringApplication;
+-import org.springframework.boot.autoconfigure.SpringBootApplication;
+-
+-@SpringBootApplication
+-public class PersonServiceApplication {
+-
+-    public static void main(String[] args) {
+-        SpringApplication.run(PersonServiceApplication.class, args);
+-    }
+-
+-}
+Index: src/test/java/com/example/personservice/PersonServiceApplicationTests.java
+===================================================================
+diff --git a/src/test/java/com/example/personservice/PersonServiceApplicationTests.java b/src/test/java/com/example/personservice/PersonServiceApplicationTests.java
+deleted file mode 100644
+--- a/src/test/java/com/example/personservice/PersonServiceApplicationTests.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,13 +0,0 @@
+-package com.example.personservice;
+-
+-import org.junit.jupiter.api.Test;
+-import org.springframework.boot.test.context.SpringBootTest;
+-
+-@SpringBootTest
+-class PersonServiceApplicationTests {
+-
+-    @Test
+-    void contextLoads() {
+-    }
+-
+-}
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/NotificationDto.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/NotificationDto.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/NotificationDto.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/NotificationDto.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,26 +0,0 @@
+-Individuals.javapackage liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class Notification {
+-
+-    @Id
+-    private Long id;
+-
+-    private String topic;
+-
+-    private String message;
+-
+-    private AllertDateTime allertDateTime;
+-
+-}
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/ExternalDevicesInputDto.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/ExternalDevicesInputDto.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/ExternalDevicesInputDto.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/ExternalDevicesInputDto.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,24 +0,0 @@
+-package liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class ExternalDevicesInputDto {
+-
+-    @Id
+-    private Long id;
+-
+-    private String topic;
+-
+-    private TransferDateTime allertDateTime;
+-
+-}
+Index: core/src/main/resources/templates/home.html
+===================================================================
+diff --git a/core/src/main/resources/templates/home.html b/core/src/main/resources/templates/home.html
+deleted file mode 100644
+--- a/core/src/main/resources/templates/home.html	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,12 +0,0 @@
+-<!DOCTYPE html>
+-<html>
+-<head>
+-    <title>Todo List Index Page</title>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-</head>
+-<body>
+-<h1>Всем привет!</h1>
+-<div>Date/Time now: <span th:text="${dtnow}"/></div>
+-</body>
+-</html>
+\ No newline at end of file
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/model/MedicalHistory.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/model/MedicalHistory.java b/core/src/main/java/liga/medical/medicalmonitoring/core/model/MedicalHistory.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/model/MedicalHistory.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,45 +0,0 @@
+-package liga.medical.medicalmonitoring.core.model;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Column;
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import javax.persistence.OneToOne;
+-import javax.persistence.Table;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Table
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class MedicalHistory {
+-
+-    @Id
+-    private Long id;
+-
+-    @OneToOne
+-    private Patient patient;
+-
+-    @Column(name = "doc_number")
+-    private String docNumber;
+-
+-    @Column(name = "create_dttm")
+-    private OffsetDateTime createDttm;
+-
+-    @Column(name = "modify_dttm")
+-    private OffsetDateTime modifyDttm;
+-
+-    @Column(name = "doctor")
+-    private String doctor;
+-
+-    @Column(name = "diagnosis")
+-    private String diagnosis;
+-
+-    @OneToOne
+-    private MedicalHistory medicalHistory;
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientRepository.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientRepository.java b/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientRepository.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/PatientRepository.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,10 +0,0 @@
+-package liga.medical.medicalmonitoring.core.repository;
+-
+-import org.springframework.data.jpa.repository.JpaRepository;
+-import org.springframework.stereotype.Repository;
+-import liga.medical.medicalmonitoring.core.model.Patient;
+-
+-@Repository
+-public interface PatientRepository extends JpaRepository<Patient, Long> {
+-
+-}
+Index: core-api/src/main/java/liga/medical/medicalmonitoring/api/PatientService.java
+===================================================================
+diff --git a/core-api/src/main/java/liga/medical/medicalmonitoring/api/PatientService.java b/core-api/src/main/java/liga/medical/medicalmonitoring/api/PatientService.java
+deleted file mode 100644
+--- a/core-api/src/main/java/liga/medical/medicalmonitoring/api/PatientService.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,11 +0,0 @@
+-package liga.medical.medicalmonitoring.api;
+-
+-import liga.medical.medicalmonitoring.dto.PatientDto;
+-
+-public interface PatientService {
+-
+-    PatientDto findByName(String name);
+-
+-    PatientDto save(PatientDto patientDto);
+-
+-}
+\ No newline at end of file
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/PhysicalAnomalies.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/PhysicalAnomalies.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/PhysicalAnomalies.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/PhysicalAnomalies.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,24 +0,0 @@
+-package liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class Individuals {
+-
+-    @Id
+-    private Long id;
+-
+-    private String anomalyName;
+-
+-    private int anomalyRate;
+-
+-}
+Index: core-api/pom.xml
+===================================================================
+diff --git a/core-api/pom.xml b/core-api/pom.xml
+deleted file mode 100644
+--- a/core-api/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,24 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>dependency-management-bom</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+-    </parent>
+-
+-    <packaging>jar</packaging>
+-    <artifactId>monitoring-core-api</artifactId>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>monitoring-dto</artifactId>
+-        </dependency>
+-
+-    </dependencies>
+-</project>
+\ No newline at end of file
+Index: .gitignore
+===================================================================
+diff --git a/.gitignore b/.gitignore
+deleted file mode 100644
+--- a/.gitignore	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,33 +0,0 @@
+-HELP.md
+-target/
+-!.mvn/wrapper/maven-wrapper.jar
+-!**/src/main/**/target/
+-!**/src/test/**/target/
+-
+-### STS ###
+-.apt_generated
+-.classpath
+-.factorypath
+-.project
+-.settings
+-.springBeans
+-.sts4-cache
+-
+-### IntelliJ IDEA ###
+-.idea
+-*.iws
+-*.iml
+-*.ipr
+-
+-### NetBeans ###
+-/nbproject/private/
+-/nbbuild/
+-/dist/
+-/nbdist/
+-/.nb-gradle/
+-build/
+-!**/src/main/**/build/
+-!**/src/test/**/build/
+-
+-### VS Code ###
+-.vscode/
+Index: dto/pom.xml
+===================================================================
+diff --git a/dto/pom.xml b/dto/pom.xml
+deleted file mode 100644
+--- a/dto/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,27 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>dependency-management-bom</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+-    </parent>
+-
+-    <packaging>jar</packaging>
+-    <artifactId>monitoring-dto</artifactId>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>common-dto</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>org.hibernate</groupId>
+-            <artifactId>hibernate-core</artifactId>
+-        </dependency>
+-    </dependencies>
+-</project>
+\ No newline at end of file
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/PatientController.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/PatientController.java b/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/PatientController.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/PatientController.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,28 +0,0 @@
+-package liga.medical.medicalmonitoring.core.controller.rest;
+-
+-import liga.medical.medicalmonitoring.core.service.PatientServiceImpl;
+-import liga.medical.medicalmonitoring.dto.PatientDto;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestBody;
+-import org.springframework.web.bind.annotation.RequestMapping;
+-import org.springframework.web.bind.annotation.RestController;
+-
+-@RestController
+-@RequestMapping("/patient")
+-public class PatientController {
+-
+-    private final PatientServiceImpl service;
+-
+-    @Autowired
+-    public PatientController(PatientServiceImpl service) {
+-        this.service = service;
+-    }
+-
+-    @PostMapping
+-    public ResponseEntity<PatientDto> save(@RequestBody PatientDto patientDto) {
+-        return ResponseEntity.ok(service.save(patientDto));
+-    }
+-
+-}
+\ No newline at end of file
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryRepository.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryRepository.java b/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryRepository.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryRepository.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,10 +0,0 @@
+-package liga.medical.medicalmonitoring.core.repository;
+-
+-import liga.medical.medicalmonitoring.core.model.MedicalHistory;
+-import org.springframework.data.jpa.repository.JpaRepository;
+-import org.springframework.stereotype.Repository;
+-
+-@Repository
+-public interface MedicalHistoryRepository extends JpaRepository<MedicalHistory, Long> {
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/MedicalMonitoringApplication.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/MedicalMonitoringApplication.java b/core/src/main/java/liga/medical/medicalmonitoring/core/MedicalMonitoringApplication.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/MedicalMonitoringApplication.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,15 +0,0 @@
+-package liga.medical.medicalmonitoring.core;
+-
+-import org.springframework.boot.SpringApplication;
+-import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.autoconfigure.domain.EntityScan;
+-
+-@SpringBootApplication
+-@EntityScan("liga.medical.medicalmonitoring.*")
+-public class MedicalMonitoringApplication {
+-
+-    public static void main(String[] args) {
+-        SpringApplication.run(MedicalMonitoringApplication.class, args);
+-    }
+-
+-}
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/IndividualsDto.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/IndividualsDto.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/IndividualsDto.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/IndividualsDto.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,41 +0,0 @@
+-package liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class Individuals {
+-
+-    @Id
+-    private Long id;
+-
+-    private String name;
+-
+-    private Integer age;
+-
+-    private String address;
+-
+-    private OffsetDateTime birthdayDt;
+-
+-    private String birthPlace;
+-
+-    private String registration;
+-
+-    private String passportSeries;
+-
+-    private String passportNumber;
+-
+-    private String phoneNumber;
+-
+-    private String anotherDocument;
+-
+-    private String bankAccount;
+-}
+Index: migration/pom.xml
+===================================================================
+diff --git a/migration/pom.xml b/migration/pom.xml
+deleted file mode 100644
+--- a/migration/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,24 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>dependency-management-bom</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+-    </parent>
+-
+-    <packaging>jar</packaging>
+-    <artifactId>monitoring-dto</artifactId>
+-
+-    <dependencies>
+-
+-        <dependency>
+-            <groupId>org.hibernate</groupId>
+-            <artifactId>hibernate-core</artifactId>
+-        </dependency>
+-    </dependencies>
+-</project>
+\ No newline at end of file
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/RabbitMqListener.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/RabbitMqListener.java b/core/src/main/java/liga/medical/medicalmonitoring/core/RabbitMqListener.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/RabbitMqListener.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,21 +0,0 @@
+-package liga.medical.medicalmonitoring.core;
+-
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+-import org.springframework.amqp.rabbit.annotation.EnableRabbit;
+-import org.springframework.amqp.rabbit.annotation.RabbitListener;
+-import org.springframework.stereotype.Component;
+-
+-@EnableRabbit
+-@Component
+-public class RabbitMqListener {
+-
+-    Logger logger = LoggerFactory.getLogger(RabbitMqListener.class);
+-
+-    @RabbitListener(queues = "appQueue")
+-    public void processAppQueue(String message) {
+-
+-        logger.info("Recieved from appQueue: {}", message);
+-    }
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryDtoRepository.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryDtoRepository.java b/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryDtoRepository.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/repository/MedicalHistoryDtoRepository.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,8 +0,0 @@
+-package liga.medical.medicalmonitoring.core.repository;
+-
+-import liga.medical.medicalmonitoring.dto.MedicalHistoryDto;
+-import org.springframework.data.jpa.repository.JpaRepository;
+-
+-public interface MedicalHistoryDtoRepository extends JpaRepository<MedicalHistoryDto, Long> {
+-
+-}
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/PatientDto.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/PatientDto.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/PatientDto.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/PatientDto.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,36 +0,0 @@
+-package liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class PatientDto {
+-
+-    @Id
+-    private Long id;
+-
+-    private String name;
+-
+-    private Integer age;
+-
+-    private String address;
+-
+-    private OffsetDateTime birthdayDt;
+-
+-    private String registration;
+-
+-    private String passportSeries;
+-
+-    private String passportNumber;
+-
+-    private String phoneNumber;
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/controller/MessageController.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MessageController.java b/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MessageController.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MessageController.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,44 +0,0 @@
+-package liga.medical.medicalmonitoring.core.controller;
+-
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+-import org.springframework.amqp.core.AmqpTemplate;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestBody;
+-import org.springframework.web.bind.annotation.RestController;
+-
+-import java.net.InetAddress;
+-import java.net.UnknownHostException;
+-
+-@RestController
+-public class MessageController {
+-
+-    Logger logger = LoggerFactory.getLogger(MessageController.class);
+-    String hostname = "Unknown";
+-
+-    private final AmqpTemplate template;
+-
+-    @Autowired
+-    public MessageController(AmqpTemplate template) {
+-        this.template = template;
+-    }
+-
+-    @PostMapping("/send")
+-    public ResponseEntity<String> send(@RequestBody String message) {
+-        logger.info("Sending to appQueue");
+-        template.convertAndSend("appQueue", message);
+-
+-        try {
+-            InetAddress address;
+-            address = InetAddress.getLocalHost();
+-            hostname = address.getHostName();
+-
+-        } catch (UnknownHostException ex) {
+-            System.out.println("Hostname can not be resolved");
+-        }
+-
+-        return ResponseEntity.ok(hostname + ": " + "Success sent to queue");
+-    }
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/service/MedicalHistoryServiceImpl.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/service/MedicalHistoryServiceImpl.java b/core/src/main/java/liga/medical/medicalmonitoring/core/service/MedicalHistoryServiceImpl.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/service/MedicalHistoryServiceImpl.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,27 +0,0 @@
+-package liga.medical.medicalmonitoring.core.service;
+-
+-import liga.medical.medicalmonitoring.core.mapper.MedicalHistoryMapper;
+-import liga.medical.medicalmonitoring.dto.MedicalHistoryDto;
+-import org.springframework.stereotype.Service;
+-import liga.medical.medicalmonitoring.core.repository.MedicalHistoryDtoRepository;
+-import liga.medical.medicalmonitoring.core.repository.MedicalHistoryRepository;
+-
+-@Service
+-public class MedicalHistoryServiceImpl {
+-
+-    private final MedicalHistoryRepository repository;
+-    private final MedicalHistoryDtoRepository dtoRepository;
+-    private final MedicalHistoryMapper mapper;
+-
+-    public MedicalHistoryServiceImpl(MedicalHistoryRepository medicalHistoryRepository,
+-                                     MedicalHistoryDtoRepository dtoRepository, MedicalHistoryMapper mapper) {
+-        this.repository = medicalHistoryRepository;
+-        this.dtoRepository = dtoRepository;
+-        this.mapper = mapper;
+-    }
+-
+-    public MedicalHistoryDto save(MedicalHistoryDto dto) {
+-        return mapper.toDto(repository.save(mapper.toEntity(dto)));
+-    }
+-    
+-}
+Index: utils/pom.xml
+===================================================================
+diff --git a/utils/pom.xml b/utils/pom.xml
+deleted file mode 100644
+--- a/utils/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,32 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>dependency-management-bom</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+-    </parent>
+-
+-    <packaging>jar</packaging>
+-    <artifactId>monitoring-utils</artifactId>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>common-utils</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>monitoring-dto</artifactId>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.modelmapper</groupId>
+-            <artifactId>modelmapper</artifactId>
+-        </dependency>
+-    </dependencies>
+-</project>
+\ No newline at end of file
+Index: dependency-management-bom/pom.xml
+===================================================================
+diff --git a/dependency-management-bom/pom.xml b/dependency-management-bom/pom.xml
+deleted file mode 100644
+--- a/dependency-management-bom/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,105 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>person-service</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-    </parent>
+-
+-    <artifactId>dependency-management-bom</artifactId>
+-    <packaging>pom</packaging>
+-
+-    <properties>
+-        <!--        Проектные настройки\версии-->
+-        <mybatis.version>3.5.5</mybatis.version>
+-    </properties>
+-
+-    <dependencyManagement>
+-        <dependencies>
+-            <dependency>
+-                <groupId>org.springframework.boot</groupId>
+-                <artifactId>spring-boot-dependencies</artifactId>
+-                <version>${spring.boot.version}</version>
+-                <type>pom</type>
+-                <scope>import</scope>
+-            </dependency>
+-            <dependency>
+-                <groupId>org.springframework.boot</groupId>
+-                <artifactId>spring-boot-starter-test</artifactId>
+-                <version>${springboot.test.version}</version>
+-                <scope>test</scope>
+-            </dependency>
+-
+-
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>common-dto</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>common-services</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>common-utils</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>monitoring-core-api</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>monitoring-dto</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>monitoring-utils</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>liga.medical</groupId>
+-                <artifactId>monitoring-core</artifactId>
+-                <version>${project.version}</version>
+-            </dependency>
+-
+-
+-            <dependency>
+-                <groupId>org.mybatis</groupId>
+-                <artifactId>mybatis</artifactId>
+-                <version>${mybatis.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>com.google.guava</groupId>
+-                <artifactId>guava</artifactId>
+-                <version>${guava.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>org.modelmapper</groupId>
+-                <artifactId>modelmapper</artifactId>
+-                <version>${model.mapper.version}</version>
+-            </dependency>
+-            <dependency>
+-                <groupId>javax.validation</groupId>
+-                <artifactId>validation-api</artifactId>
+-                <version>${validation-api.version}</version>
+-            </dependency>
+-        </dependencies>
+-    </dependencyManagement>
+-
+-    <build>
+-        <pluginManagement>
+-            <plugins>
+-
+-            </plugins>
+-        </pluginManagement>
+-    </build>
+-</project>
+\ No newline at end of file
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/service/PatientServiceImpl.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/service/PatientServiceImpl.java b/core/src/main/java/liga/medical/medicalmonitoring/core/service/PatientServiceImpl.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/service/PatientServiceImpl.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,26 +0,0 @@
+-package liga.medical.medicalmonitoring.core.service;
+-
+-import liga.medical.medicalmonitoring.core.mapper.PatientMapper;
+-import liga.medical.medicalmonitoring.dto.PatientDto;
+-import org.springframework.stereotype.Service;
+-import liga.medical.medicalmonitoring.core.repository.PatientDtoRepository;
+-import liga.medical.medicalmonitoring.core.repository.PatientRepository;
+-
+-@Service
+-public class PatientServiceImpl {
+-
+-    private final PatientRepository repository;
+-    private final PatientDtoRepository dtoRepository;
+-    private final PatientMapper mapper;
+-
+-    public PatientServiceImpl(PatientRepository repository, PatientDtoRepository dtoRepository, PatientMapper mapper) {
+-        this.repository = repository;
+-        this.dtoRepository = dtoRepository;
+-        this.mapper = mapper;
+-    }
+-
+-    public PatientDto save(PatientDto dto) {
+-        return mapper.toDto(repository.save(mapper.toEntity(dto)));
+-    }
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MedicalHistoryMapper.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MedicalHistoryMapper.java b/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MedicalHistoryMapper.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MedicalHistoryMapper.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,22 +0,0 @@
+-package liga.medical.medicalmonitoring.core.mapper;
+-
+-import liga.medical.medicalmonitoring.core.model.MedicalHistory;
+-import liga.medical.medicalmonitoring.dto.MedicalHistoryDto;
+-import org.modelmapper.ModelMapper;
+-import org.springframework.stereotype.Component;
+-
+-import java.util.Objects;
+-
+-@Component
+-public class MedicalHistoryMapper {
+-
+-    ModelMapper modelMapper = MappingUtils.modelMapper();
+-
+-    public MedicalHistory toEntity(MedicalHistoryDto dto) {
+-        return Objects.isNull(dto) ? null : modelMapper.map(dto, MedicalHistory.class);
+-    }
+-
+-    public MedicalHistoryDto toDto(MedicalHistory entity) {
+-        return Objects.isNull(entity) ? null : modelMapper.map(entity, MedicalHistoryDto.class);
+-    }
+-}
+Index: .mvn/wrapper/maven-wrapper.properties
+===================================================================
+diff --git a/.mvn/wrapper/maven-wrapper.properties b/.mvn/wrapper/maven-wrapper.properties
+deleted file mode 100644
+--- a/.mvn/wrapper/maven-wrapper.properties	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,2 +0,0 @@
+-distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.8.4/apache-maven-3.8.4-bin.zip
+-wrapperUrl=https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.1.0/maven-wrapper-3.1.0.jar
+Index: src/main/resources/application.properties
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+deleted file mode 100644
+--- a/src/main/resources/application.properties	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,1 +0,0 @@
+-
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/mapper/PatientMapper.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/PatientMapper.java b/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/PatientMapper.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/PatientMapper.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,22 +0,0 @@
+-package liga.medical.medicalmonitoring.core.mapper;
+-
+-import liga.medical.medicalmonitoring.core.model.Patient;
+-import liga.medical.medicalmonitoring.dto.PatientDto;
+-import org.modelmapper.ModelMapper;
+-import org.springframework.stereotype.Component;
+-
+-import java.util.Objects;
+-
+-@Component
+-public class PatientMapper {
+-
+-    ModelMapper modelMapper;
+-
+-    public Patient toEntity(PatientDto dto) {
+-        return Objects.isNull(dto) ? null : modelMapper.map(dto, Patient.class);
+-    }
+-
+-    public PatientDto toDto(Patient entity) {
+-        return Objects.isNull(entity) ? null : modelMapper.map(entity, PatientDto.class);
+-    }
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/MedicalHistoryController.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/MedicalHistoryController.java b/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/MedicalHistoryController.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/rest/MedicalHistoryController.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,28 +0,0 @@
+-package liga.medical.medicalmonitoring.core.controller.rest;
+-
+-import liga.medical.medicalmonitoring.core.service.MedicalHistoryServiceImpl;
+-import liga.medical.medicalmonitoring.dto.MedicalHistoryDto;
+-import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.http.ResponseEntity;
+-import org.springframework.web.bind.annotation.PostMapping;
+-import org.springframework.web.bind.annotation.RequestBody;
+-import org.springframework.web.bind.annotation.RequestMapping;
+-import org.springframework.web.bind.annotation.RestController;
+-
+-@RestController
+-@RequestMapping("/medical")
+-public class MedicalHistoryController {
+-
+-    private final MedicalHistoryServiceImpl service;
+-
+-    @Autowired
+-    public MedicalHistoryController(MedicalHistoryServiceImpl service) {
+-        this.service = service;
+-    }
+-
+-    @PostMapping
+-    public ResponseEntity<MedicalHistoryDto> save(@RequestBody MedicalHistoryDto medicalHistoryDto) {
+-        return ResponseEntity.ok(service.save(medicalHistoryDto));
+-    }
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/model/Patient.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/model/Patient.java b/core/src/main/java/liga/medical/medicalmonitoring/core/model/Patient.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/model/Patient.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,61 +0,0 @@
+-package liga.medical.medicalmonitoring.core.model;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Id;
+-import javax.persistence.Column;
+-import javax.persistence.Entity;
+-import javax.persistence.OneToOne;
+-import javax.persistence.Table;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Table
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class Patient {
+-
+-    @Id
+-    private Long id;
+-
+-    @Column(name = "name")
+-    private String name;
+-
+-    @Column(name = "gender")
+-    private String gender;
+-
+-    @Column(name = "age")
+-    private Integer age;
+-
+-    @Column(name = "address")
+-    private String address;
+-
+-    @Column(name = "birthday_dt")
+-    private OffsetDateTime birthdayDt;
+-
+-    @Column(name = "birth_place")
+-    private String birthPlace;
+-
+-    @Column(name = "registration")
+-    private String registration;
+-
+-    @Column(name = "passport_series")
+-    private String passportSeries;
+-
+-    @Column(name = "passport_number")
+-    private String passportNumber;
+-
+-    @Column(name = "phone_number")
+-    private String phoneNumber;
+-
+-    @Column(name = "another_document")
+-    private String anotherDocument;
+-
+-    @OneToOne
+-    private MedicalHistory medicalHistory;
+-
+-}
+-
+Index: core-api/src/main/java/liga/medical/medicalmonitoring/api/MedicalHistoryService.java
+===================================================================
+diff --git a/core-api/src/main/java/liga/medical/medicalmonitoring/api/MedicalHistoryService.java b/core-api/src/main/java/liga/medical/medicalmonitoring/api/MedicalHistoryService.java
+deleted file mode 100644
+--- a/core-api/src/main/java/liga/medical/medicalmonitoring/api/MedicalHistoryService.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,11 +0,0 @@
+-package liga.medical.medicalmonitoring.api;
+-
+-import liga.medical.medicalmonitoring.dto.MedicalHistoryDto;
+-
+-public interface MedicalHistoryService {
+-
+-    MedicalHistoryDto findById(Long id);
+-
+-    MedicalHistoryDto save(MedicalHistoryDto medicalHistory);
+-
+-}
+Index: dto/src/main/java/liga/medical/medicalmonitoring/dto/MedicalHistoryDto.java
+===================================================================
+diff --git a/dto/src/main/java/liga/medical/medicalmonitoring/dto/MedicalHistoryDto.java b/dto/src/main/java/liga/medical/medicalmonitoring/dto/MedicalHistoryDto.java
+deleted file mode 100644
+--- a/dto/src/main/java/liga/medical/medicalmonitoring/dto/MedicalHistoryDto.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,30 +0,0 @@
+-package liga.medical.medicalmonitoring.dto;
+-
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-
+-import javax.persistence.Entity;
+-import javax.persistence.Id;
+-import java.time.OffsetDateTime;
+-
+-@Entity
+-@Data
+-@NoArgsConstructor
+-@AllArgsConstructor
+-public class MedicalHistoryDto {
+-
+-    @Id
+-    private Long id;
+-
+-    private String docNumber;
+-
+-    private OffsetDateTime createDttm;
+-
+-    private OffsetDateTime modifyDttm;
+-
+-    private String doctor;
+-
+-    private String diagnosis;
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/config/RabbitConfiguration.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/config/RabbitConfiguration.java b/core/src/main/java/liga/medical/medicalmonitoring/core/config/RabbitConfiguration.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/config/RabbitConfiguration.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,54 +0,0 @@
+-package liga.medical.medicalmonitoring.core.config;
+-
+-import org.slf4j.Logger;
+-import org.slf4j.LoggerFactory;
+-import org.springframework.amqp.core.AmqpAdmin;
+-import org.springframework.amqp.core.Queue;
+-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+-import org.springframework.amqp.rabbit.connection.ConnectionFactory;
+-import org.springframework.amqp.rabbit.core.RabbitAdmin;
+-import org.springframework.amqp.rabbit.core.RabbitTemplate;
+-import org.springframework.context.annotation.Bean;
+-import org.springframework.context.annotation.Configuration;
+-
+-@Configuration
+-public class RabbitConfiguration {
+-
+-    Logger logger = LoggerFactory.getLogger(RabbitConfiguration.class);
+-
+-    //Создаем соединение с именем localhost
+-    @Bean
+-    public ConnectionFactory connectionFactory() {
+-        return new CachingConnectionFactory("localhost");
+-    }
+-
+-    //Модуль управления
+-    @Bean
+-    public AmqpAdmin amqpAdmin() {
+-        return new RabbitAdmin(connectionFactory());
+-    }
+-
+-    //Шаблон
+-    @Bean
+-    public RabbitTemplate rabbitTemplate() {
+-        return new RabbitTemplate(connectionFactory());
+-    }
+-
+-    //Очередь с названием
+-    @Bean
+-    public Queue appQueue() {
+-        return new Queue("appQueue");
+-    }
+-
+-    //Получатель сообщений, читающий очереди
+-//    @Bean
+-//    public SimpleMessageListenerContainer messageListenerContainer() {
+-//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+-//        container.setConnectionFactory(connectionFactory());
+-//        container.setQueueNames("appQueue");
+-//        container.setMessageListener(message -> logger.info("Recieved from appQueue : "
+-//                + new String(message.getBody())));
+-//        return container;
+-//    }
+-
+-}
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/controller/MainAppController.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MainAppController.java b/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MainAppController.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/controller/MainAppController.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,19 +0,0 @@
+-package liga.medical.medicalmonitoring.core.controller;
+-
+-import java.time.LocalDateTime;
+-import java.time.format.DateTimeFormatter;
+-import java.time.format.FormatStyle;
+-import org.springframework.stereotype.Controller;
+-import org.springframework.ui.Model;
+-import org.springframework.web.bind.annotation.GetMapping;
+-
+-@Controller
+-public class MainAppController {
+-
+-    @GetMapping("/")
+-    public String homePage(Model model) {
+-        String dtNow = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).format(LocalDateTime.now());
+-        model.addAttribute("dtnow", dtNow);
+-        return "home";
+-    }
+-}
+Index: core/src/main/resources/application.properties
+===================================================================
+diff --git a/core/src/main/resources/application.properties b/core/src/main/resources/application.properties
+deleted file mode 100644
+--- a/core/src/main/resources/application.properties	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,4 +0,0 @@
+-spring.datasource.url=jdbc:postgresql://localhost:5432/work_pc?currentSchema=clinic
+-spring.datasource.username=postgres
+-spring.datasource.password=root
+-spring.jpa.hibernate.ddl-auto=create
+Index: core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MappingUtils.java
+===================================================================
+diff --git a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MappingUtils.java b/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MappingUtils.java
+deleted file mode 100644
+--- a/core/src/main/java/liga/medical/medicalmonitoring/core/mapper/MappingUtils.java	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,20 +0,0 @@
+-package liga.medical.medicalmonitoring.core.mapper;
+-
+-import org.modelmapper.ModelMapper;
+-import org.modelmapper.convention.MatchingStrategies;
+-import org.springframework.stereotype.Component;
+-
+-import static org.modelmapper.config.Configuration.AccessLevel.PRIVATE;
+-
+-@Component
+-public class MappingUtils {
+-    public static ModelMapper modelMapper() {
+-        ModelMapper mapper = new ModelMapper();
+-        mapper.getConfiguration()
+-                .setMatchingStrategy(MatchingStrategies.STRICT)
+-                .setFieldMatchingEnabled(true)
+-                .setSkipNullEnabled(true)
+-                .setFieldAccessLevel(PRIVATE);
+-        return mapper;
+-    }
+-}
+Index: pom.xml
+===================================================================
+diff --git a/pom.xml b/pom.xml
+deleted file mode 100644
+--- a/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,34 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-<!--    <parent>-->
+-<!--        <groupId>liga.medical</groupId>-->
+-<!--        <artifactId>common</artifactId>-->
+-<!--        <version>0.0.1</version>-->
+-<!--    </parent>-->
+-
+-    <version>0.0.1</version>
+-    <artifactId>person-service</artifactId>
+-    <groupId>liga.medical</groupId>
+-    <packaging>pom</packaging>
+-
+-    <name>medicine-clinic</name>
+-    <description>Сервис физических лиц</description>
+-
+-    <modules>
+-        <module>dependency-management-bom</module>
+-        <module>dto</module>
+-        <module>core-api</module>
+-        <module>utils</module>
+-        <module>core</module>
+-    </modules>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>org.projectlombok</groupId>
+-            <artifactId>lombok</artifactId>
+-        </dependency>
+-    </dependencies>
+-
+-</project>
+Index: core/pom.xml
+===================================================================
+diff --git a/core/pom.xml b/core/pom.xml
+deleted file mode 100644
+--- a/core/pom.xml	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
++++ /dev/null	(revision 1a724300b6ff2ad64ea63dae4c331b722388344d)
+@@ -1,100 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project xmlns="http://maven.apache.org/POM/4.0.0"
+-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+-    <modelVersion>4.0.0</modelVersion>
+-
+-    <parent>
+-        <artifactId>dependency-management-bom</artifactId>
+-        <groupId>liga.medical</groupId>
+-        <version>0.0.1</version>
+-        <relativePath>../dependency-management-bom/pom.xml</relativePath>
+-    </parent>
+-
+-    <packaging>jar</packaging>
+-    <artifactId>monitoring-core</artifactId>
+-
+-    <dependencies>
+-        <dependency>
+-            <groupId>org.postgresql</groupId>
+-            <artifactId>postgresql</artifactId>
+-            <scope>runtime</scope>
+-        </dependency>
+-        <dependency>
+-            <groupId>org.springframework.boot</groupId>
+-            <artifactId>spring-boot-starter-data-jpa</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>org.springframework.boot</groupId>
+-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>common-services</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>monitoring-core-api</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>monitoring-utils</artifactId>
+-        </dependency>
+-        <dependency>
+-            <groupId>liga.medical</groupId>
+-            <artifactId>monitoring-dto</artifactId>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.mybatis</groupId>
+-            <artifactId>mybatis</artifactId>
+-        </dependency>
+-
+-<!--        <dependency>-->
+-<!--            <groupId>com.rabbitmq</groupId>-->
+-<!--            <artifactId>amqp-client</artifactId>-->
+-<!--            <version>5.14.0</version>-->
+-<!--        </dependency>-->
+-
+-<!--        <dependency>-->
+-<!--            <groupId>org.springframework</groupId>-->
+-<!--            <artifactId>spring-jms</artifactId>-->
+-<!--            <version>4.3.3.RELEASE</version>-->
+-<!--        </dependency>-->
+-        <!-- https://mvnrepository.com/artifact/org.springframework.amqp/spring-rabbit -->
+-        <dependency>
+-            <groupId>org.springframework.amqp</groupId>
+-            <artifactId>spring-amqp</artifactId>
+-            <version>2.3.7</version>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.springframework.amqp</groupId>
+-            <artifactId>spring-rabbit</artifactId>
+-            <version>2.3.7</version>
+-        </dependency>
+-
+-
+-
+-    </dependencies>
+-
+-    <build>
+-        <finalName>message-analyzer</finalName>
+-        <plugins>
+-            <plugin>
+-                <groupId>org.springframework.boot</groupId>
+-                <artifactId>spring-boot-maven-plugin</artifactId>
+-                <version>${spring.boot.version}</version>
+-                <executions>
+-                    <execution>
+-                        <id>build-info</id>
+-                        <goals>
+-                            <goal>build-info</goal>
+-                        </goals>
+-                    </execution>
+-                </executions>
+-            </plugin>
+-        </plugins>
+-    </build>
+-</project>
+\ No newline at end of file

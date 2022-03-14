@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="monitoring-core" />
+        <module name="monitoring-dto" />
+        <module name="common-services" />
+        <module name="monitoring-utils" />
+        <module name="analyzer-utils" />
+        <module name="analyzer-core-api (1)" />
+        <module name="analyzer-utils (1)" />
+        <module name="monitoring-core-api" />
+        <module name="analyzer-core" />
+        <module name="common-utils" />
+        <module name="analyzer-core-api" />
+        <module name="common-dto" />
+        <module name="analyzer-dto" />
+        <module name="analyzer-dto (1)" />
+        <module name="analyzer-core (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="analyzer-core" target="11" />
+      <module name="analyzer-core (1)" target="11" />
+      <module name="analyzer-core-api" target="11" />
+      <module name="analyzer-core-api (1)" target="11" />
+      <module name="analyzer-dto" target="11" />
+      <module name="analyzer-dto (1)" target="11" />
+      <module name="analyzer-utils" target="11" />
+      <module name="analyzer-utils (1)" target="11" />
+      <module name="common" target="11" />
+      <module name="common-dto" target="11" />
+      <module name="common-services" target="11" />
+      <module name="common-utils" target="11" />
+      <module name="dependency-management-bom" target="11" />
+      <module name="dependency-management-bom (1)" target="11" />
+      <module name="dependency-management-bom (2)" target="11" />
+      <module name="dependency-managment-bom" target="11" />
+      <module name="device" target="11" />
+      <module name="medical-monitoring" target="11" />
+      <module name="message-analyzer" target="11" />
+      <module name="monitoring-core" target="11" />
+      <module name="monitoring-core-api" target="11" />
+      <module name="monitoring-dto" target="11" />
+      <module name="monitoring-utils" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

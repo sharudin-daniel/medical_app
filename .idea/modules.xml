@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../device/core/analyzer-core.iml" filepath="$PROJECT_DIR$/../device/core/analyzer-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/core/analyzer-core (1).iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/core/analyzer-core (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../device/core-api/analyzer-core-api.iml" filepath="$PROJECT_DIR$/../device/core-api/analyzer-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/core-api/analyzer-core-api (1).iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/core-api/analyzer-core-api (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../device/dto/analyzer-dto.iml" filepath="$PROJECT_DIR$/../device/dto/analyzer-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/dto/analyzer-dto (1).iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/dto/analyzer-dto (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../device/utils/analyzer-utils.iml" filepath="$PROJECT_DIR$/../device/utils/analyzer-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/utils/analyzer-utils (1).iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/utils/analyzer-utils (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-module-develop/common.iml" filepath="$PROJECT_DIR$/../common-module-develop/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-module-develop/dto/common-dto.iml" filepath="$PROJECT_DIR$/../common-module-develop/dto/common-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-module-develop/common-services/common-services.iml" filepath="$PROJECT_DIR$/../common-module-develop/common-services/common-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-module-develop/common-utils/common-utils.iml" filepath="$PROJECT_DIR$/../common-module-develop/common-utils/common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../device/dependency-management-bom/dependency-management-bom.iml" filepath="$PROJECT_DIR$/../device/dependency-management-bom/dependency-management-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/dependency-management-bom/dependency-management-bom (1).iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/dependency-management-bom/dependency-management-bom (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/dependency-management-bom/dependency-management-bom (2).iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/dependency-management-bom/dependency-management-bom (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/../common-module-develop/dependency-management-bom/dependency-managment-bom.iml" filepath="$PROJECT_DIR$/../common-module-develop/dependency-management-bom/dependency-managment-bom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../device/device.iml" filepath="$PROJECT_DIR$/../device/device.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/medical-monitoring.iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/medical-monitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../message-analyzer-develop/message-analyzer.iml" filepath="$PROJECT_DIR$/../message-analyzer-develop/message-analyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/core/monitoring-core.iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/core/monitoring-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/core-api/monitoring-core-api.iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/core-api/monitoring-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/dto/monitoring-dto.iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/dto/monitoring-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../medical-monitoring-master/utils/monitoring-utils.iml" filepath="$PROJECT_DIR$/../medical-monitoring-master/utils/monitoring-utils.iml" />
+    </modules>
+  </component>
+</project>
