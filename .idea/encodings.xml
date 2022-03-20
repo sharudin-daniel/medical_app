@@ -5,5 +5,8 @@
     <file url="file://$PROJECT_DIR$/device/core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/message-analyzer-develop/core/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/message-analyzer-develop/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/person-service-master/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/person-service-master/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/person-service-master/migration/src/main/resources" charset="UTF-8" />
   </component>
 </project>

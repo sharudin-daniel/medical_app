@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/device/pom.xml" />
         <option value="$PROJECT_DIR$/common-module-develop/pom.xml" />
         <option value="$PROJECT_DIR$/medical-monitoring-master/pom.xml" />
+        <option value="$PROJECT_DIR$/person-service-master/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

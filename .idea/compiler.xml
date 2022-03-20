@@ -6,14 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="analyzer-core-api" />
+        <module name="person-service-migration" />
+        <module name="person-service-dto" />
+        <module name="person-service-core" />
         <module name="analyzer-utils" />
         <module name="analyzer-utils (1)" />
         <module name="analyzer-core-api (1)" />
         <module name="analyzer-core" />
+        <module name="person-service-core-api" />
+        <module name="analyzer-core-api" />
         <module name="analyzer-dto" />
         <module name="analyzer-dto (1)" />
         <module name="analyzer-core (1)" />
+        <module name="person-service-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +37,7 @@
       <module name="dependency-management-bom" target="11" />
       <module name="dependency-management-bom (1)" target="11" />
       <module name="dependency-management-bom (2)" target="11" />
+      <module name="dependency-management-bom (3)" target="11" />
       <module name="dependency-managment-bom" target="11" />
       <module name="device" target="11" />
       <module name="medical-monitoring" target="11" />
@@ -40,6 +46,12 @@
       <module name="monitoring-core-api" target="11" />
       <module name="monitoring-dto" target="11" />
       <module name="monitoring-utils" target="11" />
+      <module name="person-service" target="11" />
+      <module name="person-service-core" target="11" />
+      <module name="person-service-core-api" target="11" />
+      <module name="person-service-dto" target="11" />
+      <module name="person-service-migration" target="11" />
+      <module name="person-service-utils" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -14,9 +14,16 @@
       <module fileurl="file://$PROJECT_DIR$/message-analyzer-develop/dependency-management-bom/dependency-management-bom.iml" filepath="$PROJECT_DIR$/message-analyzer-develop/dependency-management-bom/dependency-management-bom.iml" />
       <module fileurl="file://$PROJECT_DIR$/device/dependency-management-bom/dependency-management-bom (1).iml" filepath="$PROJECT_DIR$/device/dependency-management-bom/dependency-management-bom (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/medical-monitoring-master/dependency-management-bom/dependency-management-bom (2).iml" filepath="$PROJECT_DIR$/medical-monitoring-master/dependency-management-bom/dependency-management-bom (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/dependency-management-bom/dependency-management-bom (3).iml" filepath="$PROJECT_DIR$/person-service-master/dependency-management-bom/dependency-management-bom (3).iml" />
       <module fileurl="file://$PROJECT_DIR$/device/device.iml" filepath="$PROJECT_DIR$/device/device.iml" />
       <module fileurl="file://$PROJECT_DIR$/medical-monitoring-master/medical-monitoring.iml" filepath="$PROJECT_DIR$/medical-monitoring-master/medical-monitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/message-analyzer-develop/message-analyzer.iml" filepath="$PROJECT_DIR$/message-analyzer-develop/message-analyzer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/person-service.iml" filepath="$PROJECT_DIR$/person-service-master/person-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/core/person-service-core.iml" filepath="$PROJECT_DIR$/person-service-master/core/person-service-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/core-api/person-service-core-api.iml" filepath="$PROJECT_DIR$/person-service-master/core-api/person-service-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/dto/person-service-dto.iml" filepath="$PROJECT_DIR$/person-service-master/dto/person-service-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/migration/person-service-migration.iml" filepath="$PROJECT_DIR$/person-service-master/migration/person-service-migration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/person-service-master/utils/person-service-utils.iml" filepath="$PROJECT_DIR$/person-service-master/utils/person-service-utils.iml" />
     </modules>
   </component>
 </project>
