@@ -5,22 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5e1f192-d657-417e-b200-9c33963387d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/person-service-master/migration/src/main/resources/fill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_liquibase_liquibase_core_4_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/person-service-master/core/src/main/java/liga/medical/personservice/core/controller/ContactController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/person-service-master/core/src/main/java/liga/medical/personservice/core/service/MedicalCardService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/core/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/core/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/dependency-management-bom/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/dependency-management-bom/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/migration/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/migration/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/migration/src/main/resources/db/local/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/migration/src/main/resources/db/local/liquibase.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/person-service-master/migration/src/main/resources/db/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/person-service-master/migration/src/main/resources/db/master.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop-5" />
+        <entry key="$PROJECT_DIR$" value="developer-5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +77,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/person-service-master" />
   </component>
@@ -131,7 +156,9 @@
       <workItem from="1647247270532" duration="318000" />
       <workItem from="1647544840644" duration="4917000" />
       <workItem from="1647625333980" duration="2102000" />
-      <workItem from="1647752295462" duration="1901000" />
+      <workItem from="1647752295462" duration="2660000" />
+      <workItem from="1647872199514" duration="699000" />
+      <workItem from="1648217045152" duration="3443000" />
     </task>
     <task id="LOCAL-00001" summary="RabbitListener">
       <created>1647246177484</created>
@@ -154,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647247478744</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SQL tasks 1-10">
+      <created>1647754791958</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647754791958</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +196,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RabbitListener" />
-    <option name="LAST_COMMIT_MESSAGE" value="RabbitListener" />
+    <MESSAGE value="SQL tasks 1-10" />
+    <option name="LAST_COMMIT_MESSAGE" value="SQL tasks 1-10" />
   </component>
 </project>
