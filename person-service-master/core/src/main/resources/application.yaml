@@ -5,9 +5,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/medical?currentSchema=person_data
+    url: jdbc:postgresql://localhost:5432/medical_db?currentSchema=medical_schema
     username: postgres
-    password: postgres
+    password: password
     driver-class-name: org.postgresql.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:

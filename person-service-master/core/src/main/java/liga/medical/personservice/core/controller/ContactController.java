@@ -1,10 +1,12 @@
 package liga.medical.personservice.core.controller;
 
-import liga.medical.personservice.core.model.MedicalCardEntity;
-import liga.medical.personservice.core.repository.MedicalCardRepository;
-import liga.medical.personservice.dto.MedicalCardDto;
+import liga.medical.personservice.core.model.ContactEntity;
+
+import liga.medical.personservice.core.service.ContactService;
+
+import liga.medical.personservice.dto.ContactDto;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,40 +17,39 @@ import java.util.stream.Collectors;
 
 @Validated
 @RestController
-@RequestMapping("/medical-card")
+@RequestMapping("/contact")
+@RequiredArgsConstructor
 public class ContactController {
 
-    @Autowired
-    private MedicalCardRepository medicalCardRepository;
+    private final ContactService contactService;
+    private final ModelMapper modelMapper;
 
-    @Autowired
-    private ModelMapper modelMapper;
 
     @PostMapping("/save")
-    void saveNewMedicalCard(@RequestBody @Valid MedicalCardDto medicalCard) {
-        MedicalCardEntity cardEntity = modelMapper.map(medicalCard, MedicalCardEntity.class);
-        medicalCardRepository.insert(cardEntity);
+    void saveNewContactEntity(@RequestBody @Valid ContactDto contactDto) {
+        ContactEntity contactEntity = modelMapper.map(contactDto, ContactEntity.class);
+        contactService.insert(contactEntity);
     }
 
     @PostMapping("/save-all")
-    void saveNewMedicalCard(@RequestBody @Valid List<MedicalCardDto> medicalCard) {
-        List<MedicalCardEntity> cardEntityList = medicalCard.stream()
-                .map(el -> modelMapper.map(el, MedicalCardEntity.class))
+    void saveNewContactEntity(@RequestBody @Valid List<ContactDto> contactEntity) {
+        List<ContactEntity> contactEntityList = contactEntity.stream()
+                .map(el -> modelMapper.map(el, ContactEntity.class))
                 .collect(Collectors.toList());
-        medicalCardRepository.insertAll(cardEntityList);
+        contactService.insertAll(contactEntityList);
     }
 
     @GetMapping("/{id}")
-    MedicalCardDto getCardById(@PathVariable Long id) {
-        MedicalCardEntity medicalCard = medicalCardRepository.findById(id);
-        return modelMapper.map(medicalCard, MedicalCardDto.class);
+    ContactDto getContactById(@PathVariable Long id) {
+        ContactEntity contactEntity = contactService.getContactById(id);
+        return modelMapper.map(contactEntity, ContactDto.class);
     }
 
     @GetMapping("")
-    List<MedicalCardDto> getCardByIds(@RequestParam List<Long> ids) {
-        List<MedicalCardEntity> medicalCard = medicalCardRepository.findByIds(ids);
-        return medicalCard.stream()
-                .map(el -> modelMapper.map(el, MedicalCardDto.class))
+    List<ContactDto> getContactByIds(@RequestParam List<Long> ids) {
+        List<ContactEntity> contactEntity = contactService.getContactByIds(ids);
+        return contactEntity.stream()
+                .map(el -> modelMapper.map(el, ContactDto.class))
                 .collect(Collectors.toList());
     }
 }

@@ -11,4 +11,11 @@
         </rollback>
     </changeSet>
 
+    <changeSet id="2022-03-25 18:00:00" author="sharudin" context="main" labels="fill">
+        <sqlFile path="start-0.0.1/sql/create_db_tables.sql" relativeToChangelogFile="true"/>
+        <rollback>
+            <sqlFile path="start-0.0.1/sql/rollback/create_db_tables_rollback.sql" relativeToChangelogFile="true"/>
+        </rollback>
+    </changeSet>
+
 </databaseChangeLog>
